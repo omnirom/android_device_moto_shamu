@@ -15,3 +15,4 @@
 #
 
 add_lunch_combo aosp_shamu-userdebug
+add_lunch_combo omni_shamu-userdebug
