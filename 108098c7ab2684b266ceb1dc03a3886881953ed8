@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eb3671c6_8cd4274e",
+        "filename": "twrp.fstab",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001180
+      },
+      "writtenOn": "2014-12-14T08:15:34Z",
+      "side": 1,
+      "message": "forceencrypt within recovery?",
+      "range": {
+        "startLine": 2,
+        "startChar": 74,
+        "endLine": 2,
+        "endChar": 92
+      },
+      "revId": "108098c7ab2684b266ceb1dc03a3886881953ed8",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
