@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "eb3671c6_d26a3ab0",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2014-12-18T18:29:17Z",
+      "side": 1,
+      "message": "Should be TARGET_RECOVERY_PIXEL_FORMAT :\u003d \"RGB_565\"",
+      "revId": "108098c7ab2684b266ceb1dc03a3886881953ed8",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eb3671c6_b275c695",
+        "filename": "twrp.fstab",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2014-12-18T18:29:17Z",
+      "side": 1,
+      "message": "Remove the # sign at the beginning of this line.",
+      "revId": "108098c7ab2684b266ceb1dc03a3886881953ed8",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eb3671c6_8cd4274e",
         "filename": "twrp.fstab",
         "patchSetId": 2
