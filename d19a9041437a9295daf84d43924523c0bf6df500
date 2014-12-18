@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eb3671c6_32c6369f",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 1000667
+      },
+      "writtenOn": "2014-12-18T20:23:28Z",
+      "side": 1,
+      "message": "Isn\u0027t this TW_INCLUDE_CRYPTO now?\n\nhttps://github.com/omnirom/android_bootable_recovery/commit/ceb7b8e5767aaac364d75c647ea130968e15f3ed#diff-99f13c4bbfb0f343f925c8f4afe58858R2",
+      "range": {
+        "startLine": 170,
+        "startChar": 0,
+        "endLine": 170,
+        "endChar": 19
+      },
+      "revId": "d19a9041437a9295daf84d43924523c0bf6df500",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eb3671c6_72c0ae80",
+        "filename": "twrp.fstab",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000667
+      },
+      "writtenOn": "2014-12-18T20:23:28Z",
+      "side": 1,
+      "message": "I\u0027d still sleep better with this set to \"encryptable\".",
+      "range": {
+        "startLine": 2,
+        "startChar": 80,
+        "endLine": 2,
+        "endChar": 92
+      },
+      "revId": "d19a9041437a9295daf84d43924523c0bf6df500",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
