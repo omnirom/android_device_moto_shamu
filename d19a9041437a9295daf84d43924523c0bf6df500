@@ -25,6 +25,24 @@
     },
     {
       "key": {
+        "uuid": "eb3671c6_d23b1a95",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2014-12-18T20:27:27Z",
+      "side": 1,
+      "message": "doesn\u0027t really matter since INCLUDE_L_CRYPTO is just including INCLUDE_CRYPTO\n\nhttps://github.com/omnirom/android_bootable_recovery/blob/android-5.0/Android.mk#L258",
+      "parentUuid": "eb3671c6_32c6369f",
+      "revId": "d19a9041437a9295daf84d43924523c0bf6df500",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eb3671c6_72c0ae80",
         "filename": "twrp.fstab",
         "patchSetId": 3
@@ -42,6 +60,24 @@
         "endLine": 2,
         "endChar": 92
       },
+      "revId": "d19a9041437a9295daf84d43924523c0bf6df500",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eb3671c6_f2401e0e",
+        "filename": "twrp.fstab",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2014-12-18T20:27:27Z",
+      "side": 1,
+      "message": "Dees?",
+      "parentUuid": "eb3671c6_72c0ae80",
       "revId": "d19a9041437a9295daf84d43924523c0bf6df500",
       "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
       "unresolved": false
