@@ -29,3 +29,4 @@ persist.radio.alt_mbn_name=tmo_alt.mbn
 
 ro.com.android.prov_mobiledata=false
 
+net.tethering.noprovisioning=true
