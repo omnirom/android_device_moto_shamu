@@ -33,7 +33,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/moto/shamu/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     device/moto/shamu/apq8084-taiko-tfa9890_stereo_co_Button_Jack.kl:system/usr/keylayout/apq8084-taiko-tfa9890_stereo_co_Button_Jack.kl \
-	device/moto/shamu/atmel_mxt_ts.idc:system/usr/idc/atmel_mxt_ts.idc
+    device/moto/shamu/atmel_mxt_ts.idc:system/usr/idc/atmel_mxt_ts.idc
+
+# Hotword Detection
+PRODUCT_COPY_FILES += \
+    device/moto/shamu/hotword_detection/com.motorola.triggerenroll.xml:system/etc/permissions/com.motorola.triggerenroll.xml \
+    device/moto/shamu/hotword_detection/libtrainingcheck.so:system/lib/libtrainingcheck.so \
+    device/moto/shamu/hotword_detection/TriggerEnroll.apk:system/priv-app/TriggerEnroll/TriggerEnroll.apk \
+    device/moto/shamu/hotword_detection/TriggerTrainingService.apk:system/priv-app/TriggerTrainingService/TriggerTrainingService.apk
 
 PRODUCT_COPY_FILES += \
     device/moto/shamu/audio_policy.conf:system/etc/audio_policy.conf \

@@ -37,9 +37,9 @@ PRODUCT_MANUFACTURER := motorola
 
 # Kernel inline build
 TARGET_KERNEL_SOURCE := kernel/moto/shamu
-TARGET_KERNEL_CONFIG := omni_shamu_defconfig
-TARGET_VARIANT_CONFIG := omni_shamu_defconfig
-TARGET_SELINUX_CONFIG := omni_shamu_defconfig
+TARGET_KERNEL_CONFIG := shamu_defconfig
+TARGET_VARIANT_CONFIG := shamu_defconfig
+TARGET_SELINUX_CONFIG := shamu_defconfig
 
 $(call inherit-product-if-exists, vendor/motorola/shamu/shamu-vendor.mk)
 
