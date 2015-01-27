@@ -41,5 +41,5 @@ TARGET_KERNEL_CONFIG := omni_shamu_defconfig
 TARGET_VARIANT_CONFIG := omni_shamu_defconfig
 TARGET_SELINUX_CONFIG := omni_shamu_defconfig
 
-$(call inherit-product-if-exists, vendor/motorola/shamu/shamu-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/shamu/device-vendor.mk)
 
