@@ -48,6 +48,9 @@ TARGET_BOOTANIMATION_SIZE := 960x640
 PRODUCT_PACKAGES += \
     libxml2
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.sib16_support=1
+
 # Recovery - TWRP
 PRODUCT_COPY_FILES += \
     device/moto/shamu/twrp.fstab:recovery/root/etc/twrp.fstab
