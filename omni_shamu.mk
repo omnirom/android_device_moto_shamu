@@ -49,7 +49,8 @@ PRODUCT_PACKAGES += \
     libxml2
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.sib16_support=1
+    persist.radio.sib16_support=1 \
+    persist.rcs.supported=0
 
 # Recovery - TWRP
 PRODUCT_COPY_FILES += \
