@@ -35,6 +35,10 @@ PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 6
 PRODUCT_MANUFACTURER := motorola
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT="google/shamu/shamu:5.1/LMY47E/1748839:user/release-keys" \
+    PRIVATE_BUILD_DESC="shamu-user 5.1 LMY47E 1748839 release-keys"
+
 # Kernel inline build
 TARGET_KERNEL_SOURCE := kernel/moto/shamu
 TARGET_KERNEL_CONFIG := omni_shamu_defconfig
