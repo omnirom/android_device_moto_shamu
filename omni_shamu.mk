@@ -41,5 +41,9 @@ TARGET_KERNEL_CONFIG := omni_shamu_defconfig
 TARGET_VARIANT_CONFIG := omni_shamu_defconfig
 TARGET_SELINUX_CONFIG := omni_shamu_defconfig
 
+# SELinux
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.selinux=1
+
 $(call inherit-product-if-exists, vendor/motorola/shamu/device-vendor.mk)
 
