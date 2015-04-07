@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b22818b_21aec394",
+        "filename": "init.shamu.power.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2015-04-07T21:17:53Z",
+      "side": 1,
+      "message": "clean this up later",
+      "revId": "9c7c502cd101c8c22c474d1a135e11e8438f2cf5",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b22818b_41b3bffe",
+        "filename": "power/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000124
+      },
+      "writtenOn": "2015-04-07T21:17:53Z",
+      "side": 1,
+      "message": "Probably unnecessary",
+      "revId": "9c7c502cd101c8c22c474d1a135e11e8438f2cf5",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
