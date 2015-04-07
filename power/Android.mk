@@ -17,9 +17,12 @@
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_SRC_FILES := power_shamu.c
-LOCAL_SHARED_LIBRARIES := liblog libcutils
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
+#LOCAL_MODULE_RELATIVE_PATH := hw
+LOCAL_SRC_FILES := \
+                   power_shamu.c \
+                   util.c
+LOCAL_SHARED_LIBRARIES := liblog libcutils libdl
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := power.shamu
 include $(BUILD_SHARED_LIBRARY)

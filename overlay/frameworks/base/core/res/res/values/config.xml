@@ -322,4 +322,7 @@
 
     <!-- Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
+
+    <!-- Power Profiles -->
+    <bool name="config_powerProfilesSupported">true</bool>
 </resources>

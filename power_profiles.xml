@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<profiles>
+    <!-- there must be a single profile which has set disable=true
+    this defines the default profile which is used by default or
+    if profiles are disabled. For limits the special value of "max"
+    can be used so that the HAL can use the correct value on its own
+    The name attribute is mandatory
+    maxGpu is a value > 0 < /sys/class/kgsl/kgsl-3d0/min_pwrlevel
+    with 0 as the maximum frequency for GPU-->
+    <profile
+        disable="true"
+        name="default"
+        maxFreq="max"
+        maxCpu="max"
+        maxGpu="max" />
+    <!-- there must be a single profile with lowpower=true
+    this is used when the AOSP battery saver mode is enabled
+    this will be used also if profile switching is disabled -->
+    <profile
+        lowpower="true"
+        name="lowpower"
+        maxFreq="1036800"
+        maxCpu="2"
+        maxGpu="2" />
+    <!-- add other profiles -->
+    <profile
+        name="powersave"
+        maxFreq="1728000"
+        maxCpu="max"
+        maxGpu="1" />
+    <profile
+        name="ultra"
+        maxFreq="1497600"
+        maxCpu="2"
+        maxGpu="1" />
+</profiles>
