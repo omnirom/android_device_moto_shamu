@@ -3,7 +3,7 @@
     "remote": "omnirom",
     "repository": "android_kernel_moto_shamu",
     "target_path": "kernel/moto/shamu",
-    "revision": "android-5.0"
+    "revision": "android-5.1"
   }
 ]
 
