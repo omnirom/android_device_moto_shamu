@@ -244,9 +244,6 @@ on boot
     chown media media /sys/devices/c55_ctrl/gpio_core/value
     chown media media /sys/devices/c55_ctrl/gpio_reset/value
 
-    # cpuquiet
-    chown system system /sys/devices/system/cpu/cpuquiet/cpuquiet_driver/max_cpus
-
 # subsystem ramdump collection
 on property:persist.sys.qc.sub.rdump.on=*
     write /sys/module/subsystem_restart/parameters/enable_ramdumps ${persist.sys.qc.sub.rdump.on}
@@ -528,9 +525,9 @@ service qseecomd /system/bin/qseecomd
    user root
    group root
 
-#service mpdecision /system/bin/mpdecision --avg_comp
-#   class main
-#   user root
+service mpdecision /system/bin/mpdecision --avg_comp
+   class main
+   user root
 
 service ss_ramdump /system/bin/subsystem_ramdump
     class main
