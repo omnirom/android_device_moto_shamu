@@ -56,6 +56,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
+# WiFi Calling
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.data.iwlan.enable=true \
+    persist.radio.ignore_ims_wlan=1 \
+    persist.radio.data_con_rprt=1
+
 # Override product naming for Omni
 PRODUCT_NAME := omni_shamu
 PRODUCT_BRAND := google
