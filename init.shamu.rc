@@ -160,8 +160,8 @@ on boot
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
 
-    mkdir /dev/socket/mpdecision 2775 root system
-    chmod 2775 /dev/socket/mpdecision
+    #mkdir /dev/socket/mpdecision 2775 root system
+    #chmod 2775 /dev/socket/mpdecision
 
     setprop wifi.interface wlan0
 
@@ -248,6 +248,9 @@ on boot
     chmod 664 /sys/class/leds/red/brightness
     chmod 664 /sys/class/leds/green/brightness
     chmod 664 /sys/class/leds/blue/brightness
+
+    # cpuquiet
+    chown system system /sys/devices/system/cpu/cpuquiet/cpuquiet_driver/max_cpus
 
 # subsystem ramdump collection
 on property:persist.sys.qc.sub.rdump.on=*
@@ -546,9 +549,9 @@ service qseecomd /system/bin/qseecomd
    user root
    group root
 
-service mpdecision /system/bin/mpdecision --avg_comp
-   class main
-   user root
+#service mpdecision /system/bin/mpdecision --avg_comp
+#   class main
+#   user root
 
 service ss_ramdump /system/bin/subsystem_ramdump
     class main
