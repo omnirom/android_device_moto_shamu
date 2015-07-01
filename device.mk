@@ -364,6 +364,10 @@ PRODUCT_OEM_PROPERTIES := \
     ro.oem.* \
     oem.*
 
+# Nexus6Parts
+PRODUCT_PACKAGES += \
+    Nexus6Parts
+
 # Copy the qcril.db file from qcril to system. Useful to get the radio tech family for the camped operator
 PRODUCT_COPY_FILES += \
     device/moto/shamu/qcril.db:system/etc/ril/qcril.db
