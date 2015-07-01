@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="org.omnirom.device"
+	android:sharedUserId="android.uid.system" >
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-sdk
+		android:minSdkVersion="18"
+		android:targetSdkVersion="21" />
+	<application
+		android:label="@string/advanced_settings"
+		android:theme="@android:style/Theme.Material.Settings"
+		android:supportsRtl="true" >
+		<activity
+			android:name="org.omnirom.device.DeviceSettings"
+			android:exported="true"
+		    android:label="@string/advanced_settings"
+			android:launchMode="singleTask" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<receiver android:name="org.omnirom.device.Startup" >
+			<intent-filter android:priority="100" >
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>
+	</application>
+</manifest>
