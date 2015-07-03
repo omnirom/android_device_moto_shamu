@@ -354,6 +354,19 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
    ro.frp.pst=/dev/block/platform/msm_sdcc.1/by-name/frp
 
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.rcs.supported=0 \
+	persist.audio.dualmic.config=endfire \
+	persist.audio.fluence.voicecall=true \
+	persist.audio.fluence.voicerec=false \
+	persist.audio.fluence.speaker=false \
+	persist.radio.sib16_support=1 \
+	persist.data.qmi.adb_logmask=0 \
+	persist.data.iwlan.enable=true \
+	persist.radio.ignore_ims_wlan=1 \
+	persist.radio.data_con_rprt=1 \
+	keyguard.no_require_sim=true
+
 # Delegation for OEM customization
 PRODUCT_OEM_PROPERTIES := \
     ro.config.ringtone \
