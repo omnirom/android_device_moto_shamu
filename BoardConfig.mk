@@ -24,7 +24,6 @@ TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 TARGET_NO_BOOTLOADER := true
 
-BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
@@ -175,23 +174,6 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.shamu
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
-
-# Enable workaround for slow rom flash
-BOARD_SUPPRESS_SECURE_ERASE := true
-
-# Omni
-TARGET_BOOTANIMATION_SIZE := 1440x960
-
-# Healthd
-HEALTHD_ENABLE_TRICOLOR_LED := true
-
-# TWRP
-TW_THEME := portrait_hdpi
-TW_INCLUDE_L_CRYPTO := true
-BOARD_HAS_NO_REAL_SDCARD := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
-TW_SCREEN_BLANK_ON_BOOT := true
 
 -include vendor/motorola/shamu/BoardConfigVendor.mk
 
