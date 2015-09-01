@@ -20,9 +20,6 @@
 # Everything in this directory will become public
 
 PRODUCT_COPY_FILES += \
-    device/moto/shamu/twrp.fstab:recovery/root/etc/twrp.fstab
-
-PRODUCT_COPY_FILES += \
     device/moto/shamu/init.shamu.rc:root/init.shamu.rc \
     device/moto/shamu/init.shamu.power.rc:root/init.shamu.power.rc \
     device/moto/shamu/init.shamu.usb.rc:root/init.shamu.usb.rc \
@@ -155,21 +152,7 @@ PRODUCT_PACKAGES += \
     libaudio-resampler
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    media.aac_51_output_enabled=true \
-    persist.audio.dualmic.config=endfire \
-    persist.audio.fluence.voicecall=true \
-    persist.audio.fluence.voicerec=false \
-    persist.audio.fluence.speaker=false \
     ro.audio.monitorRotation=true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.isUsbOtgEnabled=1
-
-# WiFi calling
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.data.iwlan.enable=true \
-    persist.radio.ignore_ims_wlan=1 \
-    persist.radio.data_con_rprt=1
 
 # Audio effects
 PRODUCT_PACKAGES += \
@@ -231,13 +214,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.apm_sim_not_pwdn=1 \
-    persist.radio.no_wait_for_card=1 \
-    persist.radio.sib16_support=1
-
-# Rich Communications Service is disabled in 5.1
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.rcs.supported=0
+    persist.radio.apm_sim_not_pwdn=1
 
 #Reduce IMS logging
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -264,10 +241,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.fsg_reload_on=1 \
     persist.radio.mcfg_enabled=1
-
-# Allow tethering without provisioning app
-PRODUCT_PROPERTY_OVERRIDES += \
-    net.tethering.noprovisioning=true
 
 # Camera configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -345,7 +318,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
    ro.hwui.text_large_cache_width=2048 \
    ro.hwui.text_large_cache_height=1024
 
-
 PRODUCT_PROPERTY_OVERRIDES += \
    dalvik.vm.heapgrowthlimit=256m
 
@@ -378,10 +350,6 @@ PRODUCT_OEM_PROPERTIES := \
     ro.config.wallpaper_component \
     ro.oem.* \
     oem.*
-
-# Nexus6Parts
-PRODUCT_PACKAGES += \
-    Nexus6Parts
 
 # Copy the qcril.db file from qcril to system. Useful to get the radio tech family for the camped operator
 PRODUCT_COPY_FILES += \
