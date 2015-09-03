@@ -1,7 +1,7 @@
 #!/bin/bash
 
 OUTDIR=vendor/$VENDOR/$DEVICE
-MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
+MAKEFILE=../../../$OUTDIR/device-partial.mk
 VENDOR_MAKEFILE=../../../$OUTDIR/device-vendor.mk
 YEAR=`date +"%Y"`
 
