@@ -42,8 +42,8 @@ TARGET_VARIANT_CONFIG := omni_shamu_defconfig
 TARGET_SELINUX_CONFIG := omni_shamu_defconfig
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="google/shamu/shamu:5.1.1/LYZ28E/1914015:user/release-keys" \
-    PRIVATE_BUILD_DESC="shamu-user 5.1.1 LYZ28E 1914015 release-keys"
+    BUILD_FINGERPRINT="google/shamu/shamu:5.1.1/LYZ28J/2128181:user/release-keys" \
+    PRIVATE_BUILD_DESC="shamu-user 5.1.1 LYZ28J 2128181 release-keys"
 
 # SELinux
 PRODUCT_PROPERTY_OVERRIDES += \
