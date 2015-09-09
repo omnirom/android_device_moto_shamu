@@ -46,7 +46,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.get_imsi_from_sim=true \
     persist.radio.no_wait_for_card=1 \
     persist.radio.sib16_support=1
 
