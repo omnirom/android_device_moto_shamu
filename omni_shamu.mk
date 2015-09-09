@@ -88,6 +88,6 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="google/shamu/shamu:5.1.1/LYZ28J/2128181:user/release-keys" \
-    PRIVATE_BUILD_DESC="shamu-user 5.1.1 LYZ28J 2128181 release-keys"
+    BUILD_FINGERPRINT="google/shamu/shamu:5.1.1/LMY48M/2167285:user/release-keys" \
+    PRIVATE_BUILD_DESC="shamu-user 5.1.1 LMY48M 2167285 release-keys"
 
