@@ -4,7 +4,7 @@ type fsg_file, fs_type, contextmount_type;
 
 type cnd_socket, file_type;
 
-type adspd_socket, file_type;
+type adspd_socket, file_type, mlstrustedobject;
 type camera_socket, file_type;
 type mpdecision_socket, file_type;
 type qmuxd_socket, file_type;
@@ -13,19 +13,20 @@ type thermald_socket, file_type;
 # Socket node needed by ims_data daemon
 type ims_socket, file_type;
 
-type diag_logs, file_type, data_file_type;
+type diag_logs, file_type, data_file_type, mlstrustedobject;
 type ram_dump_logs, file_type, data_file_type;
 type time_data_file, file_type, data_file_type;
 type gsiffd_data_file, data_file_type, file_type;
 type quipc_data_file, data_file_type, file_type;
 type dropbox_data_file, file_type, data_file_type;
-type adspd_data_file, file_type, data_file_type;
+type adspd_data_file, file_type, data_file_type, mlstrustedobject;
 type audio_cutback_data_file, file_type, data_file_type;
 
 type sysfs_rmnet, fs_type, sysfs_type;
 type sysfs_smdcntl_open_timeout, fs_type, sysfs_type;
 type sysfs_xhci_msm_hsic, fs_type, sysfs_type;
 type sysfs_msm_hsic_host, fs_type, sysfs_type;
+type sysfs_mmi_touch, fs_type, sysfs_type;
 
 type persist_file, file_type;
 type persist_data_file, file_type;

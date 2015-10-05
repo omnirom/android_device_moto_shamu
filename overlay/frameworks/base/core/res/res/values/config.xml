@@ -135,10 +135,13 @@
         <item>"bp-tools:rndis:rndis,diag,diag_mdm,serial_hsic,serial_tty,rmnet_hsic,usbnet,adb"</item>
         <item>"bp-tools:mtp,adb:diag,diag_mdm,serial_hsic,serial_tty,rmnet_hsic,usbnet,adb"</item>
         <item>"bp-tools:mtp:diag,diag_mdm,serial_hsic,serial_tty,rmnet_hsic,usbnet"</item>
+        <item>"bp-tools:adb:diag,diag_mdm,serial_hsic,serial_tty,rmnet_hsic,usbnet,adb"</item>
         <item>"mot-factory:rndis,adb:usbnet,adb"</item>
         <item>"mot-factory:rndis:usbnet"</item>
         <item>"mot-factory:mtp,adb:usbnet,adb"</item>
         <item>"mot-factory:mtp:usbnet"</item>
+        <item>"mot-factory:none:usbnet"</item>
+        <item>"mot-factory:adb:usbnet,adb"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
@@ -188,6 +191,7 @@
         <item>"mobile_ia,14,0,2,-1,true"</item>
         <item>"bluetooth,7,7,2,-1,true"</item>
         <item>"ethernet,9,9,9,-1,true"</item>
+        <item>"mobile_emergency,15,0,2,-1,true</item>
     </string-array>
 
     <!-- This string array should be overridden by the device to present a list of radio
@@ -203,6 +207,9 @@
 
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
     <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
+
+    <!-- Boolean indicating whether Hotspot 2.0/Passpoint and ANQP queries is enabled -->
+    <bool translatable="false" name="config_wifi_hotspot2_enabled">true</bool>
 
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
     <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
@@ -271,7 +278,7 @@
     <bool name="config_hotswapCapable">true</bool>
 
     <!-- Flag specifying whether VoLTE is availasble on device -->
-    <bool name="config_device_volte_available">true</bool>
+    <bool name="config_device_vt_available">false</bool>
 
     <!-- Flag specifying whether WFC over IMS is availasble on device -->
     <bool name="config_device_wfc_ims_available">true</bool>
@@ -320,4 +327,13 @@
         <item>SUPL_ES=0</item>
     </string-array>
 
+    <!-- The RadioAccessFamilies supported by the device.
+         Empty is viewed as "all".  Only used on devices which
+         don't support RIL_REQUEST_GET_RADIO_CAPABILITY
+         format is UMTS|LTE|... -->
+    <string translatable="false" name="config_radio_access_family">GSM | WCDMA | LTE | CDMA | EVDO</string>
+
+    <string-array name="config_cell_retries_per_error_code">
+        <item>36,3</item> <!-- REGULAR_DEACTIVATION, 3 retries -->
+    </string-array>
 </resources>

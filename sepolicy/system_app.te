@@ -1,11 +1,14 @@
-# TODO b/17015082
-allow system_app shell_data_file:dir search;
-
 allow system_app time:unix_stream_socket connectto;
 
 allow system_app atfwd_service:service_manager add;
 
 allow system_app cne_service:service_manager add;
+
+userdebug_or_eng(`
+  #qxdmlogger access to /data/diag_logs.
+  allow system_app diag_logs:dir rw_dir_perms;
+  allow system_app diag_logs:file create_file_perms;
+')
 
 unix_socket_connect(system_app, cnd, cnd)
 
