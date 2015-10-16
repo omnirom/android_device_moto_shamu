@@ -1,4 +1,3 @@
-#
 # Copyright 2014 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,7 +11,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-add_lunch_combo aosp_shamu-userdebug
-add_lunch_combo omni_shamu-userdebug
+# Kernel
+BOARD_KERNEL_IMAGE_NAME := zImage-dtb
+TARGET_KERNEL_SOURCE := kernel/moto/shamu
+TARGET_KERNEL_CONFIG := shamu_defconfig
+TARGET_VARIANT_CONFIG := shamu_defconfig
+TARGET_SELINUX_CONFIG := shamu_defconfig
