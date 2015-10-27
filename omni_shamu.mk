@@ -29,8 +29,11 @@ $(call inherit-product, vendor/omni/config/common.mk)
 # Bootanimation
 TARGET_BOOTANIMATION_SIZE := 960x640
 
-# Recovery - TWRP
+# RIL
+PRODUCT_PACKAGES += \
+    libxml2
 
+# Recovery - TWRP
 PRODUCT_COPY_FILES += \
     device/moto/shamu/twrp.fstab:recovery/root/etc/twrp.fstab
 
