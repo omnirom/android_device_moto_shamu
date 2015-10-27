@@ -29,6 +29,10 @@ $(call inherit-product, vendor/omni/config/common.mk)
 # Bootanimation
 TARGET_BOOTANIMATION_SIZE := 960x640
 
+# BoringSSL compatibility wrapper
+PRODUCT_PACKAGES += \
+    libboringssl-compat
+
 # Recovery - TWRP
 
 PRODUCT_COPY_FILES += \
