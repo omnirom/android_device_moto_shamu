@@ -44,6 +44,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bootanimation
 TARGET_BOOTANIMATION_SIZE := 960x640
 
+# BoringSSL compatibility wrapper
+PRODUCT_PACKAGES += \
+    libboringssl-compat
+
 # RIL
 PRODUCT_PACKAGES += \
     libxml2

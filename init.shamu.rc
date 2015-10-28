@@ -25,6 +25,9 @@ on early-init
     chown system system /sys/kernel/debug/kgsl/proc
 
 on init
+    # Preload the BoringSSL wrapper
+    export LD_PRELOAD "/system/lib/libboringssl-compat.so"
+
     # Load persistent dm-verity state
     verity_load_state
 

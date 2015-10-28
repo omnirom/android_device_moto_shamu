@@ -4,5 +4,11 @@
     "repository": "android_kernel_moto_shamu",
     "target_path": "kernel/moto/shamu",
     "revision": "android-6.0"
+  },
+  {
+    "remote": "omnirom",
+    "repository": "android_hardware_sony_boringssl-compat",
+    "target_path": "hardware/sony/boringssl-compat",
+    "revision": "android-6.0"
   }
 ]
