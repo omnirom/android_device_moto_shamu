@@ -30,5 +30,15 @@
     <integer name="config_bluetooth_tx_cur_ma">46</integer>
     <integer name="config_bluetooth_operating_voltage_mv">3500</integer>
 
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">true</bool>
+
+    <!-- Default color for notification LED is green. -->
+    <color name="config_defaultNotificationColor">#0XFF00FF00</color>
+
+    <!-- Default value for led color when battery is medium charged
+         We set this to blue as low is red and charged is green -->
+    <integer name="config_notificationsBatteryMediumARGB">0xFF0000FF</integer>
+
 </resources>
 
