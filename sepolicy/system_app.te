@@ -11,5 +11,3 @@ userdebug_or_eng(`
 ')
 
 unix_socket_connect(system_app, cnd, cnd)
-
-allow system_app tap2wake_dev:file rw_file_perms;
