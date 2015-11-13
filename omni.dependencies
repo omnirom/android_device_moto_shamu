@@ -4,5 +4,17 @@
     "repository": "android_kernel_moto_shamu",
     "target_path": "kernel/moto/shamu",
     "revision": "android-6.0"
-  }
+  },
+  {
+    "remote": "aosp",
+    "repository": "platform/hardware/qcom/camera",
+    "target_path": "hardware/qcom/camera",
+    "revision": "android-6.0.0_r26"
+  },
+  {
+    "remote": "aosp",
+    "repository": "platform/hardware/qcom/gps",
+    "target_path": "hardware/qcom/gps",
+    "revision": "android-6.0.0_r26"
+
 ]
