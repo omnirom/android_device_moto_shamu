@@ -45,4 +45,3 @@ type sysfs_sar_wifi, fs_type, sysfs_type;
 
 type sysfs_vibrator, fs_type, sysfs_type;
 
-type tap2wake_dev, fs_type, sysfs_type;
