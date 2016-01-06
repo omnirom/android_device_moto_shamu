@@ -78,7 +78,7 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="google/shamu/shamu:6.0/MRA58R/2308909:user/release-keys" \
-    PRIVATE_BUILD_DESC="shamu-user 6.0 MRA58R 2308909 release-keys"
+    BUILD_FINGERPRINT="google/shamu/shamu:6.0.1/MMB29S/2489379:user/release-keys" \
+    PRIVATE_BUILD_DESC="shamu-user 6.0.1 MMB29S 2489379 release-keys"
 
 $(call inherit-product, vendor/motorola/shamu/device-vendor.mk)
