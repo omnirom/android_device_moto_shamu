@@ -1,63 +1,62 @@
 #!/bin/bash
 
-#set -e
-export DEVICE=shamu
-export DEVICE_VENDOR=moto
 export VENDOR=motorola
+export DEVICE_VENDOR=moto
+export DEVICE=shamu
 
-echo "Extracting proprietary files..."
-
-if [ $# -eq 0 ]; then
-  SRC=adb
-else
-  if [ $# -eq 1 ]; then
-    SRC=$1
-  else
-    echo "$0: bad number of arguments"
-    echo ""
-    echo "usage: $0 [PATH_TO_EXPANDED_ROM]"
-    echo ""
-    echo "If PATH_TO_EXPANDED_ROM is not specified, blobs will be extracted from"
-    echo "the device using adb pull."
-    exit 1
-  fi
+# Check to see if the user passed a folder in to extract from rather than adb pull
+if [ $# -eq 1 ]; then
+    COPY_FROM=$1
+    test ! -d "$COPY_FROM" && echo error reading dir "$COPY_FROM" && exit 1
 fi
+
+set -e
 
 function extract() {
     for FILE in `egrep -v '(^#|^$)' $1`; do
-      OLDIFS=$IFS IFS=":" PARSING_ARRAY=($FILE) IFS=$OLDIFS
-      FILE=`echo ${PARSING_ARRAY[0]} | sed -e "s/^-//g"`
-      DEST=${PARSING_ARRAY[1]}
-      if [ -z $DEST ]
-      then
-        DEST=$FILE
-      fi
-      DIR=`dirname $DEST`
-      if [ ! -d $BASE/$DIR ]; then
-        mkdir -p $BASE/$DIR
-      fi
-      # Try CM target first
-      if [ "$SRC" = "adb" ]; then
-        adb pull /system/$DEST $BASE/$DEST
-        # if file does not exist try OEM target
-        if [ "$?" != "0" ]; then
-            adb pull /system/$FILE $BASE/$DEST
+        echo "Extracting /system/$FILE ..."
+        OLDIFS=$IFS IFS=":" PARSING_ARRAY=($FILE) IFS=$OLDIFS
+        FILE=`echo ${PARSING_ARRAY[0]} | sed -e "s/^-//g"`
+        DEST=${PARSING_ARRAY[1]}
+        if [ -z $DEST ]; then
+            DEST=$FILE
         fi
-      else
-        if [ -z $SRC/system/$DEST ]; then
-            echo ":: $DEST"
-            cp $SRC/system/$DEST $BASE/$DEST
+        DIR=`dirname $FILE`
+        if [ ! -d $2/$DIR ]; then
+            mkdir -p $2/$DIR
+        fi
+        if [ "$COPY_FROM" = "" ]; then
+            # Try destination target first
+            if [ -f /system/$DEST ]; then
+                adb pull /system/$DEST $2/$DEST
+            else
+                # if file does not exist try OEM target
+                if [ "$?" != "0" ]; then
+                    adb pull /system/$FILE $2/$DEST
+                fi
+            fi
         else
-            echo ":: $FILE"
-            cp $SRC/system/$FILE $BASE/$DEST
+            # Try destination target first
+            if [ -f $COPY_FROM/$DEST ]; then
+                cp $COPY_FROM/$DEST $2/$DEST
+            else
+                # if file does not exist try OEM target
+                if [ "$?" != "0" ]; then
+                    DIR=`dirname $DEST`
+                    if [ ! -d $2/$DIR ]; then
+                        mkdir -p $2/$DIR
+                    fi
+                    cp $COPY_FROM/$FILE $2/$DEST
+                fi
+            fi
         fi
-      fi
     done
 }
 
-BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
-rm -rf $BASE/*
+DEVICE_BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
+rm -rf $DEVICE_BASE/*
 
-extract ../../$DEVICE_VENDOR/$DEVICE/proprietary-files.txt $BASE
+# Extract the device specific files
+extract ../../$DEVICE_VENDOR/$DEVICE/proprietary-files.txt $DEVICE_BASE
 
 ./setup-makefiles.sh
