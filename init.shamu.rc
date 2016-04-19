@@ -163,8 +163,8 @@ on boot
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
 
-    mkdir /dev/socket/mpdecision 2775 root system
-    chmod 2775 /dev/socket/mpdecision
+#    mkdir /dev/socket/mpdecision 2775 root system
+#    chmod 2775 /dev/socket/mpdecision
 
     setprop wifi.interface wlan0
 
@@ -546,10 +546,10 @@ service qseecomd /system/bin/qseecomd
    user root
    group root
 
-service mpdecision /system/bin/mpdecision --avg_comp
-   class main
-   user root
-   writepid /dev/cpuset/system-background/tasks
+#service mpdecision /system/bin/mpdecision --avg_comp
+#   class main
+#   user root
+#   writepid /dev/cpuset/system-background/tasks
 
 service ss_ramdump /system/bin/subsystem_ramdump
     class main
