@@ -81,4 +81,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT="google/shamu/shamu:6.0.1/MOB30D/2704746:user/release-keys" \
     PRIVATE_BUILD_DESC="shamu-user 6.0.1 MOB30D 2704746 release-keys"
 
-$(call inherit-product, vendor/motorola/shamu/device-vendor.mk)
+$(call inherit-product, vendor/moto/shamu/device-vendor.mk)
