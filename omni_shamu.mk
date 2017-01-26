@@ -1,3 +1,6 @@
+# Include omni board-specific configurations
+include device/moto/shamu/BoardConfigOmni.mk
+
 # Inherit base AOSP device configuration
 $(call inherit-product, device/moto/shamu/aosp_shamu.mk)
 
@@ -16,3 +19,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 $(call inherit-product, vendor/omni/config/gsm.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
+# Inherit TWRP configuration
+include device/moto/shamu/twrp.mk
