@@ -19,5 +19,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 $(call inherit-product, vendor/omni/config/gsm.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
+# Inherit proprietary bits
+$(call inherit-product-if-exists, vendor/motorola/shamu/device-vendor.mk)
+
 # Inherit TWRP configuration
 include device/moto/shamu/twrp.mk
