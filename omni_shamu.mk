@@ -27,4 +27,5 @@ include device/moto/shamu/twrp.mk
 
 # include libxml2
 PRODUCT_PACKAGES += \
+    librmnetctl \
     libxml2
