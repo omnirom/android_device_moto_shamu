@@ -7,3 +7,6 @@ userdebug_or_eng(`
 allow platform_app time:unix_stream_socket connectto;
 
 unix_socket_connect(platform_app, adspd, adspd)
+
+# NFC Tile
+allow platform_app nfc_service:service_manager find;
