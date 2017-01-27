@@ -8,6 +8,9 @@ KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-ea
 # Include additional properties in separate system.prop
 TARGET_SYSTEM_PROP := device/moto/shamu/omni_system.prop
 
+# Enable sound trigger for hotword detection
+BOARD_SUPPORTS_SOUND_TRIGGER := true
+
 # TWRP
 TW_THEME := portrait_hdpi
 TW_INCLUDE_L_CRYPTO := true
