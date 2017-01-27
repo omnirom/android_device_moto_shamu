@@ -1,2 +1,4 @@
 # show SELinux state in About Phone
 ro.build.selinux=1
+
+media.aac_51_output_enabled
