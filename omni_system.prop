@@ -7,3 +7,5 @@ persist.rcs.supported=0
 persist.radio.sib16_support=1
 
 persist.data.qmi.adb_logmask
+
+persist.data.iwlan.enable=true
