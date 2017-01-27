@@ -14,3 +14,8 @@ persist.radio.ignore_ims_wlan=1
 persist.radio.data_con_rprt=1
 
 drm.service.enabled=true
+
+ro.facelock.black_timeout=700
+ro.facelock.det_timeout=2500
+ro.facelock.rec_timeout=3500
+ro.facelock.est_max_time=600
