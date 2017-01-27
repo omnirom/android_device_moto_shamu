@@ -24,3 +24,7 @@ $(call inherit-product-if-exists, vendor/motorola/shamu/device-vendor.mk)
 
 # Inherit TWRP configuration
 include device/moto/shamu/twrp.mk
+
+# include libxml2
+PRODUCT_PACKAGES += \
+    libxml2
