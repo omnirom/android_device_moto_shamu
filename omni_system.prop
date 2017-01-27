@@ -26,3 +26,6 @@ fmas.spkr_angles=10
 fmas.spkr_sgain=0
 
 persist.radio.alt_mbn_name=tmo_alt.mbn
+
+ro.com.android.prov_mobiledata=false
+
