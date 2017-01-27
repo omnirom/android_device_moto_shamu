@@ -12,3 +12,5 @@ persist.data.iwlan.enable=true
 persist.radio.ignore_ims_wlan=1
 
 persist.radio.data_con_rprt=1
+
+drm.service.enabled=true
