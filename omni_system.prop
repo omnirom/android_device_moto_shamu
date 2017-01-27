@@ -5,3 +5,5 @@ media.aac_51_output_enabled
 
 persist.rcs.supported=0
 persist.radio.sib16_support=1
+
+persist.data.qmi.adb_logmask
