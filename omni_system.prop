@@ -1,0 +1,2 @@
+# show SELinux state in About Phone
+ro.build.selinux=1
