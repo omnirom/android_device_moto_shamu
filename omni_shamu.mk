@@ -12,8 +12,8 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="google/shamu/shamu:7.1.1/N6F26Q/3549652:user/release-keys" \
-    PRIVATE_BUILD_DESC="shamu-user 7.1.1 N6F26Q 3549652 release-keys"
+    BUILD_FINGERPRINT="google/shamu/shamu:7.1.1/N6F26R/3582520:user/release-keys" \
+    PRIVATE_BUILD_DESC="shamu-user 7.1.1 N6F26R 3582520 release-keys"
 
 # Inherit OmniROM parts
 $(call inherit-product, vendor/omni/config/gsm.mk)
