@@ -2,3 +2,4 @@
 # TODO: label it sysfs_bluetooth_writable instead
 allow bluetooth sysfs:file rw_file_perms;
 allow bluetooth sysfs_usb:file w_file_perms;
+allow bluetooth storage_stub_file:dir getattr;
