@@ -29,3 +29,7 @@ include device/moto/shamu/twrp.mk
 PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
+
+# SnapdragonCamera
+PRODUCT_PACKAGES := \
+    SnapdragonCamera
