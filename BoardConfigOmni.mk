@@ -11,6 +11,9 @@ TARGET_SYSTEM_PROP := device/moto/shamu/omni_system.prop
 # Enable sound trigger for hotword detection
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 
+# Enable media extensions for Camera HAL
+TARGET_USES_MEDIA_EXTENTIONS := true
+
 # TWRP
 TW_THEME := portrait_hdpi
 TW_INCLUDE_L_CRYPTO := true
