@@ -31,5 +31,5 @@ PRODUCT_PACKAGES += \
     libxml2
 
 # SnapdragonCamera
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
     SnapdragonCamera
